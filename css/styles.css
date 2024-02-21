@@ -192,7 +192,7 @@ gap: 12px;
 /*===mob-menu===*/
 
 .mob-menu {
-  width: 320px;
+  max-width: 767px;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -206,6 +206,11 @@ gap: 12px;
   pointer-events: none;
   visibility: hidden;
   overflow: auto;
+}
+@media screen and (min-width:768px) {
+  .mob-menu {
+    display: none;
+  }
 }
 .mob-close {
   display: flex;
@@ -518,7 +523,7 @@ margin-bottom: 40px;
 .team {
   background: #f4f4fd;
   padding-top: 96px;
-  padding-bottom: 24px;
+  padding-bottom: 96px;
 }
 .team-title {
   color: #2e2f42;
@@ -539,7 +544,7 @@ margin-bottom: 40px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
   0px 1px 1px rgba(46, 47, 66, 0.16),
   0px 2px 1px rgba(46, 47, 66, 0.08);
-  margin-bottom: 72px;
+  
 }
 
 .title-name {
@@ -562,6 +567,7 @@ margin-bottom: 40px;
    display: flex;
    flex-direction: column;
    align-items: center;
+
  }
 
 /*========section4==========*/
@@ -683,6 +689,9 @@ overflow: hidden;
     letter-spacing: 0.02em;
     max-width: 264px;
 }
+.footer-form {
+  margin-top: 16px;
+}
 
 .footer-logo {
   display: flex;
@@ -708,8 +717,7 @@ overflow: hidden;
   justify-content: center;
   gap: 16px;
   color: #ffffff;
-  margin-left: auto;
-  margin-right: auto;
+  
 }
 .soc-media {
   text-align: center;
@@ -734,7 +742,6 @@ background-color: #31D0AA;
 }
 .footer-sub-text {
   text-align: center;
-  margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -743,7 +750,7 @@ background-color: #31D0AA;
   justify-content: center;
 }
 .footer-input {
-    width: 264px;
+    width: 288px;
     height: 40px;
     font-size: 12px;
     line-height: 2;
@@ -790,8 +797,9 @@ margin-left: 16px;
 
 @media screen and (min-width:768px) {
   .web-footer {
-    margin-bottom: 0;
-  }
+      margin-bottom: 0;
+      margin-right: 24px;
+    }
 .footer-logo {
       margin-left: 0;
       justify-content: left;
@@ -799,18 +807,17 @@ margin-left: 16px;
 .footer-web-soc {
       display: flex;
       align-items: baseline;
-      margin-bottom: 0;
+      margin-bottom: 72px;
     }
 .footer-form {
     display: flex;
     gap: 24px;
+    margin-top: 16px;
   }
 .footer-soc {
   display: block;
   align-items: center;
   flex-direction: column;
-  margin-left: 24px;
-  margin-bottom: 104px;
   }
 .soc-media {
     text-align: left;
@@ -824,14 +831,22 @@ margin-left: 16px;
 .footer-btn {
     margin-left: 0;
   }
+    .footer-input {
+      width: 264px;
+    } 
+      
 }
 @media screen and (min-width:1158px) {
+.web-footer {
+      margin-bottom: 0;
+      margin-right: 120px;
+    }
 .container-footer {
   display: flex;
   align-items: baseline;
 }
 .footer-text {
-  margin-right: 120px;
+   
 }
 .footer {
   display: flex;
@@ -839,11 +854,11 @@ margin-left: 16px;
   padding-bottom: 100px;
 }
 .footer-soc {
-  margin-right: 80px;
   margin-bottom: 0;
   margin-left: 0;
 }
-.footer-text {
+.footer-web-soc {
+  margin-right: 80px;
   margin-bottom: 0;
 }
 }
